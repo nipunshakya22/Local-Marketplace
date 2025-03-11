@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Local Markets - Your Community Marketplace</title>
+    <link rel="stylesheet" href="/styles/navbar.css">
+    <link rel="stylesheet" href="/styles/seller.css">
+</head>
+<body>
+  <header>
+    <nav id="main-nav">
+      <div class="logo">
+        <img src="../assets/logo.svg" alt="Logo" class="market-logo">
+        <span>नेपाल बजार</span>
+      </div>
+      <ul>
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#vendors">Vendors</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="./pages/auth.html">Sign Up</a>
+        <a href="./pages/auth.html">Login</a>
+        <a href="./pages/seller.html" class="seller-btn">Become a Seller</a>
+      </div>
+    </nav>
+</header>
+
+<main class="main-content" style="margin-top: 2rem;">
+    <div class="container">
+      <div class="progress-indicator">
+        <div class="progress-step active" id="step1-indicator">
+          <div class="step-number">1</div>
+          <div class="step-label">Seller Information</div>
+        </div>
+        <div class="progress-step" id="step2-indicator">
+          <div class="step-number">2</div>
+          <div class="step-label">Business Details</div>
+        </div>
+        <div class="progress-step" id="step3-indicator">
+          <div class="step-number">3</div>
+          <div class="step-label">Review & Submit</div>
+        </div>
+      </div>
+
+      <div class="two-column-layout">
+        <section class="seller-info">
+          <h2>Why Sell With Us?</h2>
+          <p>
+            Join Nepal Local Markets and gain access to a growing community of local customers who value authentic Nepali products.
+          </p>
+          
+          <div class="benefits-list">
+            <div class="benefit-item">
+              <div class="benefit-icon">★</div>
+              <div class="benefit-content">
+                <h3>Increased Visibility</h3>
+                <p>Reach thousands of potential customers and grow your brand recognition locally and internationally.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon">₹</div>
+              <div class="benefit-content">
+                <h3>Simple Payments</h3>
+                <p>Secure and fast payment processing with multiple options including digital wallets and bank transfers.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon">♥</div>
+              <div class="benefit-content">
+                <h3>Seller Community</h3>
+                <p>Join our supportive network of fellow sellers to share tips, resources, and collaborate on initiatives.</p>
+              </div>
+            </div>
+            
+            <div class="benefit-item">
+              <div class="benefit-icon">↗</div>
+              <div class="benefit-content">
+                <h3>Growth Tools</h3>
+                <p>Access to marketing tools, analytics, and business insights to help you expand your operations.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        <section class="registration-container">
+          <!-- Step 1: Seller Information -->
+          <div class="step-content active" id="step1">
+            <h2>Seller Information</h2>
+            <form id="form-step1" class="registration-form">
+              <div class="form-group">
+                <label for="seller-name">Full Name</label>
+                <input type="text" id="seller-name" name="sellerName" placeholder="Enter your full name" aria-label="Seller Name" required>
+                <small class="form-text">As it appears on your identification</small>
+              </div>
+              
+              <div class="form-group">
+                <label for="seller-email">Email Address</label>
+                <input type="email" id="seller-email" name="sellerEmail" placeholder="your@email.com" aria-label="Seller Email" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="seller-phone">Phone Number</label>
+                <input type="tel" id="seller-phone" name="sellerPhone" placeholder="+977 98XXXXXXXX" aria-label="Seller Phone Number" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="seller-address">Address</label>
+                <input type="text" id="seller-address" name="sellerAddress" placeholder="Enter your address" aria-label="Seller Address" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="seller-city">City</label>
+                <input type="text" id="seller-city" name="sellerCity" placeholder="Enter your city" aria-label="City" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="seller-district">District</label>
+                <select id="seller-district" name="sellerDistrict" aria-label="District" required>
+                  <option value="" disabled selected>Select your district</option>
+                  <option value="kathmandu">Kathmandu</option>
+                  <option value="lalitpur">Lalitpur</option>
+                  <option value="bhaktapur">Bhaktapur</option>
+                  <option value="pokhara">Pokhara</option>
+                  <option value="chitwan">Chitwan</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="seller-id">ID Number (Citizenship/Passport)</label>
+                <input type="text" id="seller-id" name="sellerId" placeholder="Enter your ID number" aria-label="ID Number">
+                <small class="form-text">Used to verify your identity and for tax purposes</small>
+              </div>
+              
+              <div class="form-group full-width">
+                <div class="buttons-group">
+                  <button type="button" class="next-btn" onclick="nextStep(1)">Continue to Business Details</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Step 2: Business Details -->
+          <div class="step-content" id="step2">
+            <h2>Business Details</h2>
+            <form id="form-step2" class="registration-form">
+              <div class="form-group">
+                <label for="store-name">Store/Business Name</label>
+                <input type="text" id="store-name" name="storeName" placeholder="Your store name" aria-label="Store or Business Name" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="business-type">Business Type</label>
+                <select id="business-type" name="businessType" aria-label="Business Type" required>
+                  <option value="" disabled selected>Select your business type</option>
+                  <option value="individual">Individual Seller</option>
+                  <option value="small-business">Small Business</option>
+                  <option value="cooperative">Cooperative</option>
+                  <option value="artisan">Artisan/Craftsperson</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              
+              <div class="form-group">
+                <label for="business-registration">Business Registration Number (if applicable)</label>
+                <input type="text" id="business-registration" name="businessRegistration" placeholder="Registration number" aria-label="Business Registration Number">
+              </div>
+              
+              <div class="form-group">
+                <label for="tax-number">PAN/VAT Number (if applicable)</label>
+                <input type="text" id="tax-number" name="taxNumber" placeholder="Tax identification number" aria-label="Tax Number">
+              </div>
+              
+              <div class="form-group full-width">
+                <label>Product Categories (Select all that apply)</label>
+                <div class="categories-grid">
+                  <div class="category-option">
+                    <input type="checkbox" id="cat-handicrafts" name="categories[]" value="handicrafts">
+                    <label for="cat-handicrafts" class="category-label">Handicrafts</label>
+                  </div>
+                  <div class="category-option">
+                    <input type="checkbox" id="cat-food" name="categories[]" value="food">
+                    <label for="cat-food" class="category-label">Food & Spices</label>
+                  </div>
+                  <div class="category-option">
+                    <input type="checkbox" id="cat-clothing" name="categories[]" value="clothing">
+                    <label for="cat-clothing" class="category-label">Clothing</label>
+                  </div>
+                  <div class="category-option">
+                    <input type="checkbox" id="cat-jewelry" name="categories[]" value="jewelry">
+                    <label for="cat-jewelry" class="category-label">Jewelry</label>
+                  </div>
+                  <div class="category-option">
+                    <input type="checkbox" id="cat-art" name="categories[]" value="art">
+                    <label for="cat-art" class="category-label">Art</label>
+                  </div>
+                  <div class="category-option">
+                    <input type="checkbox" id="cat-wellness" name="categories[]" value="wellness">
+                    <label for="cat-wellness" class="category-label">Wellness</label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <label for="seller-message">Tell Us About Your Business</label>
+                <textarea id="seller-message" name="sellerMessage" rows="4" placeholder="Describe your products, experience, and why you'd like to join our marketplace" aria-label="Business Description" required></textarea>
+                <small class="form-text">This helps us understand your business better and can improve your approval chances</small>
+              </div>
+              
+              <div class="form-group full-width">
+                <label>Business Logo (optional)</label>
+                <div class="file-upload">
+                  <div class="file-upload-icon">↑</div>
+                  <p>Drag and drop or click to upload</p>
+                  <small>Maximum file size: 2MB. Formats: JPG, PNG</small>
+                  <input type="file" id="business-logo" name="businessLogo" style="display:none;">
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <label>Preferred Payment Method</label>
+                <div class="payment-options">
+                  <div class="payment-option">
+                    <input type="radio" name="paymentMethod" id="bank-transfer" value="bank-transfer" checked>
+                    <label for="bank-transfer" class="payment-label">
+                      <span class="payment-icon">🏦</span>
+                      <span>Bank Transfer</span>
+                    </label>
+                  </div>
+                  <div class="payment-option">
+                    <input type="radio" name="paymentMethod" id="esewa" value="esewa">
+                    <label for="esewa" class="payment-label">
+                      <span class="payment-icon">💰</span>
+                      <span>eSewa</span>
+                    </label>
+                  </div>
+                  <div class="payment-option">
+                    <input type="radio" name="paymentMethod" id="khalti" value="khalti">
+                    <label for="khalti" class="payment-label">
+                      <span class="payment-icon">📱</span>
+                      <span>Khalti</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="form-group full-width">
+                <div class="buttons-group">
+                  <button type="button" class="secondary" onclick="prevStep(2)">Back</button>
+                  <button type="button" class="next-btn" onclick="nextStep(2)">Review Application</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+          <!-- Step 3: Review & Submit -->
+          <div class="step-content" id="step3">
+            <h2>Review Your Application</h2>
+            
+            <div class="form-group full-width">
+              <h3>Personal Information</h3>
+              <table class="summary-table">
+                <tr>
+                  <th>Name</th>
+                  <td id="summary-name">John Doe</td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td id="summary-email">john@example.com</td>
+                </tr>
+                <tr>
+                  <th>Phone</th>
+                  <td id="summary-phone">+977 9812345678</td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td id="summary-address">123 Main St, Kathmandu</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div class="form-group full-width">
+              <h3>Business Information</h3>
+              <table class="summary-table">
+                <tr>
+                  <th>Business Name</th>
+                  <td id="summary-business">Nepal Crafts</td>
+                </tr>
+                <tr>
+                  <th>Business Type</th>
+                  <td id="summary-business-type">Artisan/Craftsperson</td>
+                </tr>
+                <tr>
+                  <th>Product Categories</th>
+                  <td id="summary-categories">Handicrafts, Art</td>
+                </tr>
+                <tr>
+                  <th>Payment Method</th>
+                  <td id="summary-payment">Bank Transfer</td>
+                </tr>
+              </table>
+            </div>
+            
+            <div class="form-group full-width">
+              <h3>Business Description</h3>
+              <p id="summary-description">I create traditional Nepali handicrafts with a modern twist, specializing in wood carvings and textile art. All my products are handmade using traditional techniques passed down through generations. I've been in this business for over 5 years and sell at local markets.</p>
+            </div>
+            
+            <div class="form-group full-width" style="margin-bottom: 1.5rem;">
+                <div class="form-check" style="display: flex; align-items: center; flex-direction: row;">
+                  <input type="checkbox" id="terms-agreement" required style="width: auto; margin-right: 8px; flex-shrink: 0;">
+                  <label for="terms-agreement" style="display: inline; margin: 0;">I agree to the <a href="#">Terms of Service</a> and <a href="#">Seller Agreement</a></label>
+                </div>
+              </div>
+            
+            <div class="form-group full-width">
+              <div class="buttons-group">
+                <button type="button" class="secondary" onclick="prevStep(3)">Back to Business Details</button>
+                <button type="button" onclick="submitForm()">Submit Application</button>
+              </div>
+            </div>
+            
+            <!-- Success Message (initially hidden) -->
+            <div class="success-message" id="success-message" style="display:none;">
+              <div class="success-icon">✓</div>
+              <h2>Application Submitted Successfully!</h2>
+              <p>Thank you for applying to become a seller on Nepal Local Markets.</p>
+              <p>We'll review your application and get back to you within 2-3 business days.</p>
+              <p>You'll receive a confirmation email shortly at <span id="confirm-email">john@example.com</span>.</p>
+              <div class="form-group" style="margin-top: 30px;">
+                <a href="/" class="button primary" style="display: inline-block; text-decoration: none;">
+                  <button type="button">Return to Homepage</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Connecting local communities with trusted vendors across Nepal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#vendors">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@nepalmarket.com</p>
+                <p>Phone: +977 1234567890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Nepal Local Markets. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        // Global variables to track the current step
+        let currentStep = 1;
+        const totalSteps = 3;
+
+        // Wait for the DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+        // Initialize the file upload functionality
+        initFileUpload();
+        
+        // Add validation to forms
+        document.getElementById('form-step1').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateStep1()) {
+            nextStep(1);
+            }
+        });
+        
+        document.getElementById('form-step2').addEventListener('submit', function(e) {
+            e.preventDefault();
+            if (validateStep2()) {
+            nextStep(2);
+            }
+        });
+        
+        // Handle the file upload area click
+        const fileUploadArea = document.querySelector('.file-upload');
+        const fileInput = document.getElementById('business-logo');
+        
+        fileUploadArea.addEventListener('click', function() {
+            fileInput.click();
+        });
+        });
+
+        // Function to initialize the file upload area
+        function initFileUpload() {
+        const fileUploadArea = document.querySelector('.file-upload');
+        const fileInput = document.getElementById('business-logo');
+        
+        // Handle file drag over
+        fileUploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            fileUploadArea.classList.add('dragover');
+        });
+        
+        // Handle file drag leave
+        fileUploadArea.addEventListener('dragleave', function() {
+            fileUploadArea.classList.remove('dragover');
+        });
+        
+        // Handle file drop
+        fileUploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            fileUploadArea.classList.remove('dragover');
+            
+            if (e.dataTransfer.files.length) {
+            fileInput.files = e.dataTransfer.files;
+            updateFileUploadLabel(e.dataTransfer.files[0].name);
+            }
+        });
+        
+        // Handle file selection via input
+        fileInput.addEventListener('change', function() {
+            if (fileInput.files.length) {
+            updateFileUploadLabel(fileInput.files[0].name);
+            }
+        });
+        }
+
+        // Function to update the file upload label
+        function updateFileUploadLabel(fileName) {
+        const fileUploadArea = document.querySelector('.file-upload');
+        const paragraph = fileUploadArea.querySelector('p');
+        paragraph.textContent = `Selected file: ${fileName}`;
+        }
+
+        // Function to move to the next step
+        function nextStep(step) {
+        if (step < totalSteps) {
+            // Validate the current step before proceeding
+            if (step === 1 && !validateStep1()) return;
+            if (step === 2 && !validateStep2()) return;
+            
+            // Hide current step
+            document.getElementById(`step${step}`).classList.remove('active');
+            document.getElementById(`step${step}-indicator`).classList.remove('active');
+            
+            // Show next step
+            document.getElementById(`step${step+1}`).classList.add('active');
+            document.getElementById(`step${step+1}-indicator`).classList.add('active');
+            
+            // Update current step
+            currentStep = step + 1;
+            
+            // If moving to step 3, populate the summary
+            if (currentStep === 3) {
+            populateSummary();
+            }
+            
+            // Scroll to top of form
+            document.querySelector('.registration-container').scrollIntoView({ behavior: 'smooth' });
+        }
+        }
+
+        // Function to move to the previous step
+        function prevStep(step) {
+        if (step > 1) {
+            // Hide current step
+            document.getElementById(`step${step}`).classList.remove('active');
+            document.getElementById(`step${step}-indicator`).classList.remove('active');
+            
+            // Show previous step
+            document.getElementById(`step${step-1}`).classList.add('active');
+            document.getElementById(`step${step-1}-indicator`).classList.add('active');
+            
+            // Update current step
+            currentStep = step - 1;
+            
+            // Scroll to top of form
+            document.querySelector('.registration-container').scrollIntoView({ behavior: 'smooth' });
+        }
+        }
+
+        // Function to validate step 1
+        function validateStep1() {
+        const form = document.getElementById('form-step1');
+        const required = form.querySelectorAll('[required]');
+        let valid = true;
+        
+        // Check all required fields
+        required.forEach(field => {
+            if (!field.value.trim()) {
+            highlightInvalidField(field);
+            valid = false;
+            } else {
+            removeInvalidHighlight(field);
+            }
+        });
+        
+        // Email validation
+        const emailField = document.getElementById('seller-email');
+        if (emailField.value && !isValidEmail(emailField.value)) {
+            highlightInvalidField(emailField, 'Please enter a valid email address.');
+            valid = false;
+        }
+        
+        // Phone validation
+        const phoneField = document.getElementById('seller-phone');
+        if (phoneField.value && !isValidPhone(phoneField.value)) {
+            highlightInvalidField(phoneField, 'Please enter a valid phone number.');
+            valid = false;
+        }
+        
+        return valid;
+        }
+
+        // Function to validate step 2
+        function validateStep2() {
+        const form = document.getElementById('form-step2');
+        const required = form.querySelectorAll('[required]');
+        let valid = true;
+        
+        // Check all required fields
+        required.forEach(field => {
+            if (!field.value.trim()) {
+            highlightInvalidField(field);
+            valid = false;
+            } else {
+            removeInvalidHighlight(field);
+            }
+        });
+        
+        // Check if at least one category is selected
+        const categories = form.querySelectorAll('input[name="categories[]"]:checked');
+        if (categories.length === 0) {
+            const categoriesSection = document.querySelector('.categories-grid');
+            highlightInvalidField(categoriesSection, 'Please select at least one product category.');
+            valid = false;
+        }
+        
+        return valid;
+        }
+
+        // Function to highlight invalid fields
+        function highlightInvalidField(field, message = 'This field is required.') {
+        field.classList.add('invalid');
+        
+        // Create error message if it doesn't exist
+        let errorElement = field.parentElement.querySelector('.error-message');
+        if (!errorElement) {
+            errorElement = document.createElement('div');
+            errorElement.className = 'error-message';
+            field.parentElement.appendChild(errorElement);
+        }
+        
+        errorElement.textContent = message;
+        }
+
+        // Function to remove invalid highlight
+        function removeInvalidHighlight(field) {
+        field.classList.remove('invalid');
+        
+        // Remove error message if it exists
+        const errorElement = field.parentElement.querySelector('.error-message');
+        if (errorElement) {
+            errorElement.remove();
+        }
+        }
+
+        // Function to validate email format
+        function isValidEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+        }
+
+        // Function to validate phone format
+        function isValidPhone(phone) {
+        // Basic validation for Nepali phone numbers
+        const phoneRegex = /^(\+977\s?)?\d{10}$/;
+        return phoneRegex.test(phone.replace(/\s/g, ''));
+        }
+
+        // Function to populate the summary in step 3
+        function populateSummary() {
+        // Personal information
+        document.getElementById('summary-name').textContent = document.getElementById('seller-name').value;
+        document.getElementById('summary-email').textContent = document.getElementById('seller-email').value;
+        document.getElementById('summary-phone').textContent = document.getElementById('seller-phone').value;
+        document.getElementById('summary-address').textContent = `${document.getElementById('seller-address').value}, ${document.getElementById('seller-city').value}, ${document.getElementById('seller-district').value}`;
+        
+        // Business information
+        document.getElementById('summary-business').textContent = document.getElementById('store-name').value;
+        const businessType = document.getElementById('business-type');
+        document.getElementById('summary-business-type').textContent = businessType.options[businessType.selectedIndex].text;
+        
+        // Selected categories
+        const categories = document.querySelectorAll('input[name="categories[]"]:checked');
+        let categoryText = '';
+        categories.forEach((category, index) => {
+            const label = document.querySelector(`label[for="${category.id}"]`).textContent;
+            categoryText += label + (index < categories.length - 1 ? ', ' : '');
+        });
+        document.getElementById('summary-categories').textContent = categoryText || 'None selected';
+        
+        // Payment method
+        const selectedPayment = document.querySelector('input[name="paymentMethod"]:checked');
+        const paymentLabel = document.querySelector(`label[for="${selectedPayment.id}"] span:last-child`).textContent;
+        document.getElementById('summary-payment').textContent = paymentLabel;
+        
+        // Business description
+        document.getElementById('summary-description').textContent = document.getElementById('seller-message').value;
+        
+        // Confirmation email
+        document.getElementById('confirm-email').textContent = document.getElementById('seller-email').value;
+        }
+
+        // Function to submit the form
+        function submitForm() {
+        // Check if terms are agreed
+        const termsAgreement = document.getElementById('terms-agreement');
+        if (!termsAgreement.checked) {
+            alert('Please agree to the Terms of Service and Seller Agreement before submitting.');
+            return;
+        }
+        
+        // Show loading state (optional)
+        const submitButton = document.querySelector('#step3 button[onclick="submitForm()"]');
+        const originalText = submitButton.textContent;
+        submitButton.textContent = 'Processing...';
+        submitButton.disabled = true;
+        
+        // Simulate form submission (in a real app, you would send this to your server)
+        setTimeout(() => {
+            // Hide the form 
+            document.getElementById('step3').querySelectorAll('.form-group').forEach(group => {
+            if (!group.querySelector('#success-message')) {
+                group.style.display = 'none';
+            }
+            });
+            
+            // Show success message
+            document.getElementById('success-message').style.display = 'block';
+            
+            // Reset button state
+            submitButton.textContent = originalText;
+            submitButton.disabled = false;
+        }, 1500);
+
+        }
+    </script>
+</body>
+</html>

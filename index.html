@@ -1,78 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hyper Local Market Place</title>
-  <link rel="stylesheet" href="./styles/index.css">
-  <link rel="stylesheet" href="./styles/navbar.css">
-  <link rel="stylesheet" href="./styles/footer.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepal Local Markets - Your Community Marketplace</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="/styles/navbar.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="./assets/logo.svg" alt="Logo" class="market-logo">
-      <span>Hyper Local Market Place</span>
+  <header>
+    <nav id="main-nav">
+      <div class="logo">
+        <img src="./assets/logo.svg" alt="Logo" class="market-logo">
+        <span>नेपाल बजार</span>
+      </div>
+      <ul>
+          <li><a href="#markets">Markets</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#vendors">Vendors</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-buttons">
+        <a href="./pages/auth.html">Sign Up</a>
+        <a href="./pages/auth.html">Login</a>
+        <a href="./pages/seller.html" class="seller-btn">Become a Seller</a>
+      </div>
+    </nav>
+    <div class="hero">
+        <h1>Discover Local Markets of Nepal</h1>
+        <p>Connect with local vendors and find fresh products in your neighborhood</p>
     </div>
-    <div class="nav-buttons">
-      <a href="./pages/auth.html">Sign Up</a>
-      <a href="./pages/auth.html">Login</a>
-    </div>
-  </nav>
+</header>
 
-  <!-- Hero Section with Video -->
-  <section class="hero">
-    <video autoplay muted loop>
-      <source src="./assets/local_market.MP4" type="video/mp4">
-      Your browser does not support HTML5 video.
-    </video>
-    <div class="search-overlay">
-      <div class="search-container">
-        <input type="text" placeholder="Search for Location">
-        <button type="submit" class="search-button">
-          <!-- Inline SVG Search Icon -->
-          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </button>
-      </div>
-    </div>
-  </section>
-  
 
-  <!-- About Us Section -->
-  <section class="about-us">
-    <h2>About Us</h2>
-    <p>
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione inventore doloremque est nihil maiores ullam rem. Expedita temporibus nostrum labore voluptates dignissimos repellendus magnam, laboriosam, cupiditate quod laudantium ipsum pariatur!
-     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum debitis voluptatem eveniet omnis reprehenderit aspernatur eaque doloremque deleniti. Corporis doloribus nisi suscipit aperiam qui facere ipsam quaerat pariatur? Totam, minima!
-     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus iste ratione harum ad. Fugiat cum quaerat nesciunt accusantium asperiores magnam corporis saepe illum praesentium. Excepturi tempore dolorum id. Adipisci, voluptates.
-    </p>
-  </section>
+    <section id="markets" class="markets">
+        <h2>Popular Markets</h2>
+        <div class="market-grid">
+            <div class="market-card">
+                <img src="https://responsiblenepaltours.wordpress.com/wp-content/uploads/2020/04/kathmandu-streetlife-.jpg" alt="Ason Market">
+                <h3>Ason Bazaar</h3>
+                <p>Traditional market in the heart of Kathmandu</p>
+            </div>
+            <div class="market-card">
+                <img src="https://c7.alamy.com/comp/HE1HYW/people-are-walking-on-indra-chowk-in-front-of-akash-bhairab-temple-HE1HYW.jpg" alt="Indra Chowk">
+                <h3>Indra Chowk</h3>
+                <p>Historic marketplace for textiles and crafts</p>
+            </div>
+            <div class="market-card">
+                <img src="https://c7.alamy.com/comp/GF6KTJ/nepal-patan-market-GF6KTJ.jpg" alt="Patan Market">
+                <h3>Patan Market</h3>
+                <p>Local produce and handicrafts</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact Us Section -->
-  <section class="contact-us">
-    <h2>Contact Us</h2>
-    <form>
-      <div class="form-group">
-        <input type="text" placeholder="Your Name" required>
-      </div>
-      <div class="form-group">
-        <input type="email" placeholder="Your Email" required>
-      </div>
-      <div class="form-group">
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-      </div>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+    <section id="products" class="featured">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="https://4.imimg.com/data4/AY/TE/IMOB-27708947/c__data_users_defapps_appdata_internetexplorer_temp_sav.jpg" alt="Fresh Vegetables">
+                <h3>Fresh Vegetables</h3>
+                <p>Locally grown organic produce</p>
+            </div>
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCTTvGMya28Cehxj4gVhuaGFEJYpsegdLNVw&s" alt="Handmade Crafts">
+                <h3>Handmade Crafts</h3>
+                <p>Traditional Nepali handicrafts</p>
+            </div>
+            <div class="product-card">
+                <img src="https://etimg.etb2bimg.com/photo/110248891.cms" alt="Spices">
+                <h3>Local Spices</h3>
+                <p>Fresh and authentic spices</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Hyper Local Market Place. All Rights Reserved.</p>
-  </footer>
+    <section id="vendors" class="vendors">
+        <h2>Meet Our Vendors</h2>
+        <div class="vendor-grid">
+            <div class="vendor-card">
+                <img src="https://media.istockphoto.com/id/492026419/photo/nepali-street-seller-in-kathmandu-near-durbar-square-nepal.jpg?s=2048x2048&w=is&k=20&c=xJnKxICo4iRzrcIKsq8r9FHdPr-syyYL_xtQsW_Itak=" alt="Local Vendor">
+                <h3>Maya's Organic Farm</h3>
+                <p>Fresh vegetables and fruits</p>
+            </div>
+            <div class="vendor-card">
+                <img src="https://www.shutterstock.com/image-photo/kathmandu-nepal-october-15-2022-260nw-2316885839.jpg" alt="Craft Maker">
+                <h3>Ram's Handicrafts</h3>
+                <p>Traditional crafts and pottery</p>
+            </div>
+            <div class="vendor-card">
+                <img src="https://images.squarespace-cdn.com/content/v1/5a3bb03b4c326d76de73ddaa/1562059239682-FTE2FJCL2Z742FT98YIM/The_Common_Wanderer_best_things_to_do_Pokhara_Nepal.jpg" alt="Spice Merchant">
+                <h3>Sharma Spice House</h3>
+                <p>Premium spices and herbs</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-container">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>Connecting local communities with trusted vendors across Nepal</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#markets">Markets</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#vendors">Vendors</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: info@nepalmarket.com</p>
+                <p>Phone: +977 1234567890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Nepal Local Markets. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+      const nav = document.getElementById('main-nav');
+      const sections = document.querySelectorAll("section[id]");
+      // Select all nav links
+      const navLinks = document.querySelectorAll("#main-nav ul li a");
+    
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+          navLinks.forEach(link => link.parentElement.classList.remove("active"));
+        }
+      });
+    
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && window.scrollY > 0) {
+            navLinks.forEach(link => link.parentElement.classList.remove("active"));
+    
+            const activeLink = document.querySelector(`#main-nav ul li a[href="#${entry.target.id}"]`);
+            if (activeLink) {
+              activeLink.parentElement.classList.add("active");
+            }
+          }
+        });
+      }, {
+        threshold: 0.6  
+      });
+    
+      sections.forEach(section => observer.observe(section));
+    </script>
+    
 </body>
 </html>
