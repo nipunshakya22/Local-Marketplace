@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyper Local Market Place</title>
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/navbar.css">
+  <link rel="stylesheet" href="./styles/footer.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <img src="./assets/logo.svg" alt="Logo" class="market-logo">
+      <span>Hyper Local Market Place</span>
+    </div>
+    <div class="nav-buttons">
+      <a href="./pages/auth.html">Sign Up</a>
+      <a href="./pages/auth.html">Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Video -->
+  <section class="hero">
+    <video autoplay muted loop>
+      <source src="./assets/local_market.MP4" type="video/mp4">
+      Your browser does not support HTML5 video.
+    </video>
+    <div class="search-overlay">
+      <div class="search-container">
+        <input type="text" placeholder="Search for Location">
+        <button type="submit" class="search-button">
+          <!-- Inline SVG Search Icon -->
+          <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- About Us Section -->
+  <section class="about-us">
+    <h2>About Us</h2>
+    <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione inventore doloremque est nihil maiores ullam rem. Expedita temporibus nostrum labore voluptates dignissimos repellendus magnam, laboriosam, cupiditate quod laudantium ipsum pariatur!
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum debitis voluptatem eveniet omnis reprehenderit aspernatur eaque doloremque deleniti. Corporis doloribus nisi suscipit aperiam qui facere ipsam quaerat pariatur? Totam, minima!
+     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus iste ratione harum ad. Fugiat cum quaerat nesciunt accusantium asperiores magnam corporis saepe illum praesentium. Excepturi tempore dolorum id. Adipisci, voluptates.
+    </p>
+  </section>
+
+  <!-- Contact Us Section -->
+  <section class="contact-us">
+    <h2>Contact Us</h2>
+    <form>
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <div class="form-group">
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Hyper Local Market Place. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

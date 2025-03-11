@@ -1,0 +1,21 @@
+:root {
+    --primary-color: #6A983C;
+    --primary-dark: #5a7d2f;
+    --white: #ffffff;
+    --gray-100: #f9fafb;
+    --gray-200: #eef2f6;
+    --gray-300: #e5e7eb;
+    --text-dark: #1f2937;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background: var(--text-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.875rem;
+}

@@ -1,0 +1,279 @@
+:root {
+    --primary: #6A983C;
+    --primary-dark: #5a7d2f;
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-700: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
+}
+
+/* Base container */
+.auth-container {
+    position: relative;
+    width: 800px;
+    height: 500px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 7rem auto;
+}
+
+/* Form styles */
+.title {
+    font-size: 1.75rem;
+    color: var(--gray-700);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    background: var(--gray-50);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(106, 152, 60, 0.1);
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+/* Toggle panel */
+.toggle-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 16px 0 0 16px;
+    padding: 3rem 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.6s ease-in-out;
+    z-index: 1000;
+}
+
+.toggle-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.toggle-container p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.toggle-btn {
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Forms area */
+.forms-container {
+    /* position: absolute; */
+    top: 0;
+    left: 35%;
+    width: 65%;
+    height: 100%;
+}
+.signin-container{
+    position: absolute;
+    top: 0;
+    right:0;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+    width: 60%;
+}
+.signup-container {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 1;
+    transition: all 0.6s ease-in-out;
+
+}
+
+.signup-container {
+    opacity: 0;
+    z-index: -1;
+}
+
+/* Animation for register mode */
+.auth-container.register-mode .toggle-container {
+    transform: translateX(185.7%);
+    border-radius: 0 16px 16px 0;
+}
+
+.auth-container.register-mode .signin-container {
+    opacity: 0;
+    z-index: -1;
+}
+
+.auth-container.register-mode .signup-container {
+    opacity: 1;
+    z-index: 5;
+}
+/* Styling for Form Footer */
+.form-footer {
+    margin-top: 1.5rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+    padding: 0.5rem 0;
+    border-top: 1px solid var(--gray-200);
+}
+
+.form-footer p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.form-footer a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.form-footer a:hover {
+    border-color: var(--primary);
+}
+
+/* Styling for Forgot Password */
+.forgot-password {
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    margin-left: auto;
+}
+
+.forgot-password:hover {
+    border-color: var(--primary);
+}
+
+/* Additional adjustments for form-options container */
+.form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+}
+
+/* Optional: adjust checkbox and label styling */
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--gray-700);
+}
+
+.remember-me input {
+    margin-right: 0.5rem;
+}
+
+/* Mobile responsive */
+@media (max-width: 850px) {
+    .auth-container {
+        width: 90%;
+        max-width: 500px;
+        height: auto;
+        min-height: 600px;
+    }
+
+    .toggle-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 120px;
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+        padding: 1.5rem;
+    }
+
+    .forms-container {
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 120px);
+    }
+
+    .signin-container, .signup-container {
+        padding: 2rem;
+    }
+
+    .auth-container.register-mode .toggle-container {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,66 @@
+:root {
+    --primary-color: #6A983C;
+    --primary-dark: #5a7d2f;
+    --white: #ffffff;
+    --gray-100: #f9fafb;
+    --gray-200: #eef2f6;
+    --gray-300: #e5e7eb;
+    --text-dark: #1f2937;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    z-index: 1000;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.navbar .logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.navbar .logo span {
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--white);
+}
+
+.navbar .nav-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.navbar .nav-buttons a {
+    text-decoration: none;
+    padding: 0.625rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.navbar .nav-buttons a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
