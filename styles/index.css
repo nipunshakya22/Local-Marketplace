@@ -5,23 +5,23 @@
     --light-color: #f1faee;
     --dark-color: #2b2d42;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: system-ui, -apple-system, sans-serif;
 }
-html {
-    scroll-behavior: smooth;
-}
-
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f3f4f6 0%, #ffffff 100%);
 }
-
 /* Header and Navigation */
 
 .hero {
