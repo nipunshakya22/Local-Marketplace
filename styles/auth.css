@@ -1,5 +1,5 @@
 :root {
-    --primary: #6A983C;
+    --primary-color: #6A983C;
     --primary-dark: #5a7d2f;
     --white: #ffffff;
     --gray-50: #f9fafb;
@@ -58,12 +58,12 @@ body {
 
 .form-group input:focus {
     outline: none;
-    border-color: var(--primary);
+    border-color: var(--primary-color);
     box-shadow: 0 0 0 4px rgba(106, 152, 60, 0.1);
 }
 
 .submit-btn {
-    background: var(--primary);
+    background: var(--primary-color);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -87,7 +87,7 @@ body {
     left: 0;
     width: 35%;
     height: 100%;
-    background: var(--primary);
+    background: var(--primary-color);
     border-radius: 16px 0 0 16px;
     padding: 3rem 2rem;
     color: white;
@@ -197,7 +197,7 @@ body {
 }
 
 .form-footer a {
-    color: var(--primary);
+    color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
     border-bottom: 1px solid transparent;
@@ -205,13 +205,13 @@ body {
 }
 
 .form-footer a:hover {
-    border-color: var(--primary);
+    border-color: var(--primary-color);
 }
 
 /* Styling for Forgot Password */
 .forgot-password {
     font-size: 0.9rem;
-    color: var(--primary);
+    color: var(--primary-color);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: border-color 0.3s ease;
@@ -219,7 +219,7 @@ body {
 }
 
 .forgot-password:hover {
-    border-color: var(--primary);
+    border-color: var(--primary-color);
 }
 
 /* Additional adjustments for form-options container */
