@@ -1,0 +1,182 @@
+:root {
+    --primary: #6A983C;
+    --primary-dark: #5a7d2f;
+    --white: #ffffff;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-700: #374151;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--gray-50);
+    color: var(--gray-700);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 480px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.header {
+    background-color: var(--primary);
+    color: var(--white);
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.tab-container {
+    display: flex;
+    border-bottom: 1px solid var(--gray-200);
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gray-700);
+    transition: all 0.3s ease;
+}
+
+.tab.active {
+    color: var(--primary);
+    border-bottom: 2px solid var(--primary);
+}
+
+.form-container {
+    padding: 25px 20px;
+}
+
+.form-section {
+    display: none;
+}
+
+.form-section.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gray-200);
+    border-radius: 6px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(106, 152, 60, 0.15);
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group .forgot-password {
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    color: var(--primary);
+    text-decoration: none;
+    margin-top: 8px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background-color: var(--primary-dark);
+}
+
+.error-message {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 5px;
+    display: none;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.remember-me input {
+    margin-right: 8px;
+    width: auto;
+}
+
+.remember-me label {
+    font-size: 14px;
+}
+
+.terms {
+    font-size: 13px;
+    margin-top: 15px;
+    text-align: center;
+    color: var(--gray-700);
+}
+
+.terms a {
+    color: var(--primary);
+    text-decoration: none;
+}
